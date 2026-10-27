@@ -27,7 +27,7 @@ The overlay uses **NVIDIA Sans**, the font of the NVIDIA overlay. The font is no
 
 ## Download
 
-Grab `vitals.exe` from the [latest release](https://github.com/LeandroLP23/vitals/releases/latest) (Windows 10/11 x64), or build it yourself.
+Grab `Vitals.exe` from the [latest release](https://github.com/LeandroLP23/vitals/releases/latest) (Windows 10/11 x64), or build it yourself.
 
 ## Build
 
@@ -37,18 +37,18 @@ Requires Rust with the MSVC toolchain.
 cargo build --release
 ```
 
-The executable is `target\release\vitals.exe`.
+The executable is `target\release\Vitals.exe`.
 
 ## Install
 
-Copy `vitals.exe` anywhere, then register it to start at logon (hidden until Alt+R):
+Copy `Vitals.exe` anywhere, then register it to start at logon (hidden until Alt+R):
 
 ```
-reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v Vitals /d "\"C:\path\to\vitals.exe\"" /f
+reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v Vitals /d "\"C:\path\to\Vitals.exe\"" /f
 ```
 
-- Start it visible right away: `vitals.exe --show`
-- Stop it: `taskkill /im vitals.exe`
+- Start it visible right away: `Vitals.exe --show`
+- Stop it: `taskkill /im Vitals.exe`
 - Remove autostart: `reg delete HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v Vitals /f`
 
 Colors, font size, spacing and refresh rate are constants at the top of `src/main.rs`.

@@ -10,11 +10,11 @@ BEGIN
   BEGIN
     BLOCK "040904B0"
     BEGIN
-      VALUE "FileDescription", "Vitals - system load overlay"
+      VALUE "FileDescription", "Vitals"
       VALUE "FileVersion", "0.2.1"
       VALUE "InternalName", "vitals"
       VALUE "LegalCopyright", "Copyright (c) 2026 Leandro Placidi, MIT License"
-      VALUE "OriginalFilename", "vitals.exe"
+      VALUE "OriginalFilename", "Vitals.exe"
       VALUE "ProductName", "Vitals"
       VALUE "ProductVersion", "0.2.1"
     END

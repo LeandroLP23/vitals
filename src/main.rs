@@ -1,4 +1,5 @@
 #![windows_subsystem = "windows"]
+#![allow(non_snake_case)] // binary is named Vitals.exe
 
 use std::cell::RefCell;
 use std::ffi::c_void;
