@@ -1,10 +1,13 @@
 [package]
-name = "perf-overlay"
-version = "0.1.0"
+name = "vitals"
+version = "0.2.0"
 edition = "2021"
 description = "Tiny always-on-top CPU / RAM / GPU / VRAM overlay for Windows, styled after the NVIDIA App statistics overlay"
 license = "MIT"
-repository = "https://github.com/LeandroLP23/perf-overlay"
+repository = "https://github.com/LeandroLP23/vitals"
+
+[build-dependencies]
+embed-resource = "3"
 
 [dependencies.windows-sys]
 version = "0.59"

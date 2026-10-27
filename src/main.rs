@@ -300,7 +300,7 @@ fn font_dir() -> Option<PathBuf> {
 
 fn main() {
     unsafe {
-        CreateMutexW(ptr::null(), 0, wz("Local\\PerfOverlay").as_ptr());
+        CreateMutexW(ptr::null(), 0, wz("Local\\Vitals").as_ptr());
         if GetLastError() == ERROR_ALREADY_EXISTS {
             return;
         }
@@ -350,7 +350,7 @@ fn main() {
         }));
 
         let hinst = GetModuleHandleW(ptr::null());
-        let class = wz("PerfOverlay");
+        let class = wz("Vitals");
         let wc = WNDCLASSW {
             lpfnWndProc: Some(wndproc),
             hInstance: hinst,
