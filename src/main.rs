@@ -351,13 +351,21 @@ fn main() {
 
         let hinst = GetModuleHandleW(ptr::null());
         let class = wz("Vitals");
-        let wc = WNDCLASSW {
+        // Task Manager shows the window's icon, not the exe's. Resource 1 is in assets/vitals.rc.
+        let icon = |size| {
+            let px = GetSystemMetrics(size);
+            LoadImageW(hinst, 1 as _, IMAGE_ICON, px, px, LR_DEFAULTCOLOR) as HICON
+        };
+        let wc = WNDCLASSEXW {
+            cbSize: mem::size_of::<WNDCLASSEXW>() as u32,
             lpfnWndProc: Some(wndproc),
             hInstance: hinst,
+            hIcon: icon(SM_CXICON),
+            hIconSm: icon(SM_CXSMICON),
             lpszClassName: class.as_ptr(),
             ..mem::zeroed()
         };
-        RegisterClassW(&wc);
+        RegisterClassExW(&wc);
         let h = CreateWindowExW(
             WS_EX_TOPMOST | WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_TOOLWINDOW | WS_EX_NOACTIVATE,
             class.as_ptr(),
