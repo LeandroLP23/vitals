@@ -23,6 +23,10 @@ A tiny always-on-top overlay for Windows that shows CPU, RAM, GPU and VRAM usage
 
 The overlay uses **NVIDIA Sans**, the font of the NVIDIA overlay. The font is not included here because it is not redistributable. At startup the program looks for `NVIDIASans_Rg.ttf` and `NVIDIASans_Bd.ttf` next to the executable, then in `%ProgramFiles%\NVIDIA Corporation\Installer2\*`, where the NVIDIA driver installer puts them. If it finds neither, it falls back to Segoe UI.
 
+## Download
+
+Grab `perf-overlay.exe` from the [latest release](https://github.com/LeandroLP23/perf-overlay/releases/latest) (Windows 10/11 x64), or build it yourself.
+
 ## Build
 
 Requires Rust with the MSVC toolchain.
